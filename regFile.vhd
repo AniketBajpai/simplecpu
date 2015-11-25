@@ -27,7 +27,7 @@ begin
   		elsif ld = '1' and selALU = '1' then
   			reg(conv_integer(unsigned(target))) <= ALUbusR;
   		elsif ld = '1' and selALU = '0' then
-  			reg(conv_integer(unsigned(target))) <= dBus;	
+  			reg(conv_integer(unsigned(target))) <= dBus;
   		end if;
   	end if;
   end process;
