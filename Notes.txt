@@ -1,0 +1,86 @@
+** States **
+
+fetch0
+fetch1
+load0
+load1
+load2
+load3
+store0
+store1
+store2
+store3
+copy0
+copy1
+add0
+add1
+sub0
+sub1
+negate0
+negate1
+shiftL0
+shiftL1
+shiftR0
+shiftR1
+halt
+brZero0
+brZero1
+brLess0
+brLess1
+brGtr0
+brGtr1
+branch0
+branch1
+
+
+* Top level - data path
+
+* Controller - controller
+
+Controller variables -
+  Input -
+clk       - Clock
+reset     - Reset
+ir_load   - Load instruction register
+ir_store  -
+ir_copy   -
+ir_add    -
+ir_sub    -
+ir_negate -
+ir_shiftL -
+ir_shiftR -
+ir_halt   -
+ir_brZero -
+ir_brLess -
+ir_brGtr  -
+ir_branch -
+ir_treg   -
+ir_areg	  -
+ir_breg   -
+ir_amode  -
+alu_regZ  -
+alu_regLZ -
+
+  Output -
+mem_enD   - enable RAM
+mem_rw    - R/W from RAM
+pc_enA    - enable program counter to write to address bus
+pc_ld     - load program counter
+pc_inc    - increment program counter
+ir_enA    - enable instruction register to write to address bus
+ir_enD    - enable instruction register to read/write from/to data bus
+ir_ld     - load instruction register
+iar_enA   -
+iar_ldrf_enD  -
+( srcA/B/D and target stand for address of registers in regfile
+Registers in regfile - Data bus & ALUbusR write to target register,
+ Registers A and B write to ALUbusA and ALUbusB,
+ Register D writes to data bus)
+rf_ld     - load register
+rf_enD    - enable register to read from ALU bus or r/w from data bus
+rf_selALU - select ALU bus if 1, else data bus
+rf_target - select target register
+rf_srcA   -
+rf_srcB   -
+rf_srcD   -
+alu_op    -
